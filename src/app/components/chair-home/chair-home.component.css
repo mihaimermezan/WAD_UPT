@@ -1,0 +1,86 @@
+section {
+  display: table;
+  margin: 8px;
+}
+
+.example-label {
+  display: table-cell;
+  font-size: 14px;
+  margin-left: 8px;
+  width: 120px;
+}
+
+.example-button-row {
+  display: table-cell;
+}
+
+.example-button-row button {
+  display: table-cell;
+  margin-right: 8px;
+}
+
+.example-flex-container {
+  display: flex;
+  justify-content: space-between;
+  width: 480px;
+}
+
+.example-button-container {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+}
+
+.my_button_class {
+  width: 250px !important;
+  height: 150px !important;
+  min-width: unset !important;
+  font-size: 22px;
+  background-color: #3b5998;
+}
+
+.my_button_class:hover {
+  background-color: #4578c1;
+}
+
+
+.image {
+  height: 40em;
+  background-size: cover;
+  width: auto;
+  background-image: url('src/assets/laptop.jpg');
+  background-position: 50% 50%;
+}
+
+.header {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  background-color: #19265c;
+}
+
+#title {
+  position: absolute;
+  color: white;
+  margin-left: 40.5%;
+  width: 25%;
+  margin-top: 0.4%;
+  z-index: 2;
+}
+
+
+#logoutButton {
+  position: absolute;
+  color: white;
+  background-color: #bf0000;
+  right: 1%;
+  top: 17%;
+  height: 69%;
+}
+
+#logoutButton:hover {
+  background-color: #ee0000;
+}
+

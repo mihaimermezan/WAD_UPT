@@ -1,0 +1,28 @@
+.main-div {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+#add-pc-container {
+  display: flex;
+}
+
+.invite-button {
+  height: 8.1vh;
+  flex: 1;
+  background-color: #3b5998;
+  color: white;
+}
