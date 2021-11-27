@@ -1,0 +1,33 @@
+.example-card {
+  max-width: 400px;
+}
+
+#main-div {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#makeChair
+{
+  background-color: #3b5998;
+  color: white;
+}
+
+#makeChair:hover
+{
+  background-color: #4b74c3;
+}
+
+#back{
+  position: absolute;
+  right: 3%;
+  background-color: #b11000;
+  color: white;
+}
+
+#back:hover{
+  background-color: #d41000;
+}

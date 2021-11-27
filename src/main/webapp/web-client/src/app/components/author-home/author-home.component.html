@@ -1,0 +1,17 @@
+<div class="header">
+  <button id="logoutButton"  (click)="logout()" mat-flat-button><mat-icon>logout</mat-icon></button>
+  <h1 id = "title" >Author Homepage</h1>
+</div>
+
+<div style="display:flex; position:absolute; left:28%;bottom:45%; width:100%">
+  <button mat-raised-button class="my_button_class" routerLink="/paper/upload">
+    Upload a new paper
+  </button>
+  <button mat-raised-button class="my_button_class" routerLink="/paper/all" >
+    My papers
+  </button>
+  <button class="my_button_class" color="warn" mat-raised-button routerLink="/reviews/{{authenticationService.getCurrentUser().id}}"
+          >
+    Reviews for my paper
+  </button>
+</div>

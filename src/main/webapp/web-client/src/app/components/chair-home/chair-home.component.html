@@ -1,0 +1,41 @@
+<div class="header">
+  <button id="logoutButton"  (click)="logout()" mat-flat-button><mat-icon>logout</mat-icon></button>
+  <h1 id = "title" >Chair Homepage</h1>
+</div>
+<div *ngIf="this.existsConference == false">
+<button class="my_button_class" color="warn" mat-raised-button routerLink="/create-conference"
+        style="position:absolute; left:40%;bottom:35%">
+  Create conference
+  <!-- fixme create conference should only show if there are no conferences-->
+</button>
+</div>
+
+
+
+<div *ngIf="existsConference == true">
+<button class="my_button_class" color="warn" mat-raised-button routerLink="/manage-pcs"
+        style="position:absolute; left:40%;bottom:59%">
+  <!--fixme those should show only if there is a conference-->
+  Manage PCs
+</button>
+
+<button class="my_button_class" color="warn" mat-raised-button routerLink="/reviews/all"
+        style="position:absolute; left:23%; bottom: 35%">
+  All Reviews
+</button>
+
+<button class="my_button_class" color="warn" mat-raised-button routerLink="/conference/structure"
+        style="position:absolute; left:57%; bottom: 35%">
+  Conference structure
+</button>
+
+<button class="my_button_class" color="warn" mat-raised-button routerLink="/review/assign"
+        style="position:absolute; left:40%; bottom: 11%">
+  Review PC
+</button>
+
+</div>
+
+
+
+

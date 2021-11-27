@@ -1,0 +1,103 @@
+.main-div {
+  position: relative;
+  height: 90%;
+  display: flex;
+  width: 40%;
+  margin-left: 30%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  margin-bottom: 4%;
+}
+#spinner{
+  margin-top: 3%;
+  margin-left: 39%;
+}
+
+.buy-another-button{
+
+  position: absolute;
+  right: 4%;
+  background-color: #225e93;
+  color: white;
+  width: 40%;
+}
+
+.buy-another-button:hover
+{
+  background-color: #2e8dda;
+}
+
+.checkout-button
+{
+  position: relative;
+  margin-left: 0;
+  background-color: #50a000;
+  color: white;
+  width: 43%;
+}
+
+.checkout-button:hover
+{
+  background-color: #5eb500;
+}
+
+#costText
+{
+
+}
+
+#buttons-grid {
+  display: flex;
+  flex-direction: row;
+}
+
+.example-form {
+  min-width: 150px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.homeButton {
+  position: relative;
+  background-color: #b5202e;
+  color: white;
+  width: 1%;
+  height: 80%;
+  margin-left: 0.2%;
+  margin-top: 0.3%;
+  z-index: 2;
+}
+
+.homeButton:hover {
+  background-color: #e12032;
+}
+
+#error
+{
+  margin-top: 4%;
+  margin-left: 29%;
+}
+
+#title {
+  position: absolute;
+  color: white;
+  margin-left: 45%;
+  width: 25%;
+  margin-top: 0.4%;
+  z-index: 2;
+}
+
+
+.header {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  background-color: #19265c;
+}

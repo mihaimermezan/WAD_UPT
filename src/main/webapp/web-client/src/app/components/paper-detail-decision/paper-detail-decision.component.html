@@ -1,0 +1,16 @@
+<div class="main-div">
+  <h2 class="mat-h2">The selected paper's decision is currently in a conflict. </h2><br>
+  <h2 class="mat-h2">As a chair, you can choose to send it back to reviewing with other reviewers, accept it or reject
+    it.</h2>
+  <h3 class="mat-h3">Choose from the following pc members if you want to reassign:</h3>
+  <mat-list>
+    <mat-list-item *ngFor="let member of pcMembers; let i = index">{{pcMembersInfo[i].firstname}} {{pcMembersInfo[i].lastname}} {{pcMembersInfo[i].affiliation}}
+      <input (click)="selectReviewer(member.pcid)" type="checkbox">
+    </mat-list-item>
+
+  </mat-list>
+  <button (click)="acceptPaper()" color="primary" id="accept-button" mat-flat-button>Accept</button>
+  <button (click)="rejectPaper()" color="primary" id="reject-button" mat-flat-button>Reject</button>
+  <button (click)="sendPaperBack()" color="primary" id="send-back-button" mat-flat-button>Send back to reviewing
+  </button>
+</div>

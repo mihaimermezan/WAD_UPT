@@ -1,0 +1,73 @@
+<div class="header">
+  <button class="nav-item nav-link homeButton" mat-flat-button routerLink="">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <h1 id="title">Buy tickets</h1>
+</div>
+<div class="main-div">
+<mat-card>
+<!--    <h1 class="mat-h1">Buy a ticket</h1>-->
+    <h5 class="mat-h5">
+      Disclaimer: due to the fact that each ticket contains sensitive data,
+      <br>we have to ask you to complete each ticket with full and valid data
+      <br>for the participant who wants to use them.
+      <br>The tickets are nominal and, once issued, cannot be canceled.
+    </h5>
+
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>First name:</mat-label>
+        <input
+          [(ngModel)]="firstName"
+          id="first-name-input" matInput
+          name="first-name" placeholder="Ex. Oliver">
+      </mat-form-field>
+    </form>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Last name:</mat-label>
+        <input
+          [(ngModel)]="lastName"
+          id="paper-authors" matInput
+          name="last-name" placeholder="Ex. Cromwell">
+      </mat-form-field>
+    </form>
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+        <mat-label>Email:</mat-label>
+        <input [(ngModel)]="email" [formControl]="emailFormControl"
+               matInput name="email"
+               placeholder="Ex. pat@example.com">
+        <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+          Please enter a valid email address
+        </mat-error>
+        <mat-error *ngIf="emailFormControl.hasError('required')">
+          Email is <strong>required</strong>
+        </mat-error>
+      </mat-form-field>
+    </form>
+    <br>
+
+
+    <mat-label>Sessions willing to participate in:</mat-label>
+  <a [hidden]="loaded"><mat-spinner [diameter]="80" id = "spinner"></mat-spinner></a>
+
+
+    <mat-selection-list (selectionChange)="selectionChanged($event)" [(ngModel)]="selectedOptions" #ssn>
+      <mat-list-option *ngFor="let session of sessions" [value]="session">
+        Session #{{session.sid}} ({{session.price}}$)
+      </mat-list-option>
+    </mat-selection-list>
+
+    <h4 id = "costText">Cost: {{ticketCost}}$</h4>
+    <div id="buttons-grid">
+      <button (click)="buyAnotherTicket()" class="buy-another-button" mat-raised-button>
+        Buy another ticket
+      </button>
+      <button (click)="proceedToCheckout()" class="checkout-button" mat-raised-button>
+        Checkout
+      </button>
+    </div>
+    <mat-error *ngIf="badData" id = "error">Input data is invalid!</mat-error>
+</mat-card>
+</div>
